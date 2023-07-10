@@ -18,3 +18,11 @@ services:
             - '3010:3010/tcp'
             - '40000-40100:40000-40100/tcp'
             - '40000-40100:40000-40100/udp'
+  networks:
+      sfu_network:
+          aliases:
+              - sfu
+networks:
+    sfu_network:
+        name: proxy_swag_network
+        external: true
